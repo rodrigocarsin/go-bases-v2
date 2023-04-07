@@ -13,14 +13,14 @@ import (
 
 var salario float64
 
-func CalculaSalario(salario float64) (string, float64) {
+func CalculaSalario(salario float64) float64 {
 
 	if salario < 50000 {
-		return "A usted no se le aplican impuestos", 0
+		return 0
 	} else if salario < 150000 {
-		return "A usted se le aplica un 17'%' de impuestos, por un total de:", salario * 0.17
+		return salario * 0.17
 	} else {
-		return "A usted se le aplica un 27'%' de impuestos, por un total de:", salario * 0.27
+		return salario * 0.27
 	}
 
 }
