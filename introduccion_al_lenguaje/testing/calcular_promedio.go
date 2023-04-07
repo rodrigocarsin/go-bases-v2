@@ -9,7 +9,6 @@ No se pueden introducir notas negativas.
 
 import (
 	"errors"
-	"fmt"
 )
 
 func CalcularPromedio(notas []float64) (float64, error) {
@@ -26,25 +25,4 @@ func CalcularPromedio(notas []float64) (float64, error) {
 	}
 
 	return average / float64(count), nil
-}
-
-func main() {
-
-	fmt.Println("Ingrese una por una las notas del alumno, para finalizar ingrese '0'")
-
-	var nota float64
-	var notas []float64
-
-	for {
-		fmt.Scanln(&nota)
-		if nota == 0 {
-			break
-		} else {
-			notas = append(notas, nota)
-
-		}
-	}
-
-	fmt.Println(CalcularPromedio(notas))
-
 }
