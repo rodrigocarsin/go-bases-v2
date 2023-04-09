@@ -1,0 +1,1 @@
+Nombre: Juan Perez, DNI: 12345678, Edad: 20, Salario: 10000
